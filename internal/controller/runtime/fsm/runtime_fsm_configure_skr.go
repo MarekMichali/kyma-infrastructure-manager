@@ -3,6 +3,7 @@ package fsm
 import (
 	"context"
 	"fmt"
+
 	"github.com/kyma-project/infrastructure-manager/pkg/gardener/shoot/extender/extensions"
 	v1 "k8s.io/api/core/v1"
 	k8s_errors "k8s.io/apimachinery/pkg/api/errors"

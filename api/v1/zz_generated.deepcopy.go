@@ -295,10 +295,9 @@ func (in *NetworkingSecurity) DeepCopy() *NetworkingSecurity {
 func (in *OIDCConfig) DeepCopyInto(out *OIDCConfig) {
 	*out = *in
 	in.OIDCConfig.DeepCopyInto(&out.OIDCConfig)
-	if in.JWKS != nil {
+	if in.JWKS != "" {
 		in, out := &in.JWKS, &out.JWKS
-		*out = make([]byte, len(*in))
-		copy(*out, *in)
+		*out = *in
 	}
 }
 
